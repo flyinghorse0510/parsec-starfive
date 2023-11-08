@@ -30,8 +30,13 @@ for bench in os.environ['BENCHMARKS'].split():
         os.makedirs(test_dir)
 
         # copy binary
-        binary = os.path.join(root_dir, param['dir'], bench,
-                              'inst', '-linux.gcc', 'bin', bench)
+        if bench == "raytrace":
+            # raytrace's binary name is `rtview`
+            binaryName = "rtview"
+        else:
+            binaryName = bench
+        binary = os.path.join(root_dir, param['dir'], binaryName,
+                              'inst', '-linux.gcc', 'bin', binaryName)
         print("copy to {}".format(test_dir))
         shutil.copy(binary, test_dir)
 
