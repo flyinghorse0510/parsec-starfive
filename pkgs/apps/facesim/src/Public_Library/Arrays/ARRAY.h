@@ -70,7 +70,7 @@ public:
 
 	~ARRAY()
 	{
-		Deallocate_Base_Pointer();
+		// Deallocate_Base_Pointer();
 	}
 
 	void Clean_Memory()
@@ -102,7 +102,10 @@ public:
 
 	void Deallocate_Base_Pointer()
 	{
-		delete[] (base_pointer + 1);
+		if (m != 0) {
+			delete[] (base_pointer + 1);
+		}
+		
 	}
 
 	ARRAY<T>& operator= (const ARRAY<T>& source)
