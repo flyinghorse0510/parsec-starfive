@@ -69,7 +69,7 @@ for bench in os.environ['BENCHMARKS'].split():
                 run_args = param['run_args'][size]
             else:
                 run_args = param['run_args'][size] % '$1'
-            fp.write('time ./{} {}\n'.format(bench, run_args))
+            fp.write('time ./{} {}\n'.format(binaryName, run_args))
         os.chmod(run_sh, int('0777', 8))
 
         # write show.sh (show result)
