@@ -16,7 +16,7 @@ shift "$(($OPTIND - 1))"
 # download_dir="${1:-.}"
 
 # Replace with the source code directory
-download_dir=~/PARSEC3
+download_dir=.
 
 outdir="${2:-.}"
 # url_base=http://parsec.cs.princeton.edu/download/3.0
