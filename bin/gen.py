@@ -35,7 +35,7 @@ for bench in os.environ['BENCHMARKS'].split():
             binaryName = "rtview"
         else:
             binaryName = bench
-        binary = os.path.join(root_dir, param['dir'], binaryName,
+        binary = os.path.join(root_dir, param['dir'], bench,
                               'inst', '-linux.gcc', 'bin', binaryName)
         print("copy to {}".format(test_dir))
         shutil.copy(binary, test_dir)
