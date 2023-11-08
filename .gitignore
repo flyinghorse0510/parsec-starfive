@@ -27,3 +27,4 @@ images
 # Ignore pycache
 __pycache__
 
+.vscode
