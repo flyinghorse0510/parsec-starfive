@@ -110,7 +110,7 @@ export HOSTTYPE=""
 export TARGET_CROSS=""
 
 # Benchmarks to compile
-export BENCHMARKS="blackscholes bodytrack canneal dedup facesim ferret fluidanimate freqmine streamcluster swaptions x264"
+export BENCHMARKS="blackscholes bodytrack canneal dedup facesim ferret fluidanimate freqmine raytrace streamcluster swaptions vips x264"
 # Benchmarks input sizes
 export SIMSIZES="simsmall simmedium simlarge"
 # Benchmarks output directory
