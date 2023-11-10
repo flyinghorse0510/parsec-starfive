@@ -4,7 +4,7 @@ This repository focused on building & running PARSEC3 Benchmark suite on linux/a
 
 Originally forked from [ppeetteerrs](https://github.com/ppeetteerrs/gem5-RISC-V-PARSEC), this repository adds some extra patches and adjustments to port the **whole** PARSEC3 benchmark suite to build & run successfully without errors on linux/amd64 and linux/riscv64.
 
-Besides, as part of the port & build work, several docker container images are built and uploaded to the Dockerhub, which facilitate the procedure of build & test dramatically. All Dockerfiles used for building these images can be found in the repository [Starfive Builder](http://gitlab.starfivetech.com/sag/starfive_builder.git).
+Besides, as part of the port & build work, several docker container images are built and uploaded to the Dockerhub(flyinghorse0510), which facilitate the procedure of build & test dramatically. All Dockerfiles used for building these images can be found in the repository [Starfive Builder](http://192.168.110.45/sag/starfive_builder).
 
 # 2. Benchmark status
 Currently, all benchmarks can be compiled and run successfully without errors. The table below shows the benchmark status:
@@ -48,7 +48,7 @@ The extra patches and adjustments made to port this benchmark suite are shown be
 
 # 4. Build
 
-Use customized and self-build docker container images to compile the benchmark suite. All Dockerfiles and scripts can be found within [Starfive Builder](http://gitlab.starfivetech.com/sag/starfive_builder.git)
+Use customized and self-build docker container images to compile the benchmark suite. All Dockerfiles and scripts can be found within [Starfive Builder](http://192.168.110.45/sag/starfive_builder)
 
 > Notice: currently you need to have sudo/root access to compile natively for `linux/riscv64` platform since it utilizes Linux kernel's binfmt_misc features which invokes QEMU user space emulator to run the `riscv64` version container directly on an `amd64` machine.
 
