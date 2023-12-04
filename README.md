@@ -9,23 +9,25 @@ Besides, as part of the port & build work, several docker container images are b
 # 2. Benchmark status
 Currently, all benchmarks can be compiled and run successfully without errors. The table below shows the benchmark status:
 
-| Benchmark     | Compilation(linux/amd64, native)  | Compilation(linux/riscv64, native)   | Run(linux/amd64) | Run(linux/riscv64) | Previously run on FPGA |
+| Benchmark     | Compilation(linux/amd64, native)  | Compilation(linux/riscv64, native)   | Run(linux/amd64) | Run(linux/riscv64) | Previously run on FPGA(simmedium) |
 | ------------- | --------------------------------- | ------------------------------------ | ---------------- | ------------------ | ------ |
 | blackscholes  | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | bodytrack     | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | canneal       | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | dedup         | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
-| facesim       | ✅                                | ✅                                   | ✅               | ✅                 | ❌ |
-| ferret        | ✅                                | ✅                                   | ✅               | ✅                 | ❌ |
+| facesim       | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
+| ferret        | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | fluidanimate  | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
-| freqmine      | ✅                                | ✅                                   | ✅               | ✅                 | ✅ (previously with `segmentation fault` under some circumstances) |
-| raytrace      | ✅                                | ✅                                   | ✅               | ✅                 | ❌ |
+| freqmine      | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
+| raytrace      | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | streamcluster | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 | swaptions     | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
-| vips          | ✅                                | ✅                                   | ✅               | ✅                 | ❌ |
-| x264          | ✅                                | ✅                                   | ✅               | ✅                 | ❌ |
+| vips          | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
+| x264          | ✅                                | ✅                                   | ✅               | ✅                 | ✅ |
 
 > All build and test work on linux/riscv64 is under QEMU emulator
+
+**Typically, running on FPGA with simmedium size requires 10-20 hours to complete**
 
 # 3. Extra Changes Made
 The extra patches and adjustments made to port this benchmark suite are shown below:
